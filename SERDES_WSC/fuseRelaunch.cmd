@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Gokuruto3/Documents/GitHub/Verilog-WSC/SERDES_WSC/SERDES_test_isim_beh.exe" -prj "C:/Users/Gokuruto3/Documents/GitHub/Verilog-WSC/SERDES_WSC/SERDES_test_beh.prj" "work.SERDES_test" "work.glbl" 
