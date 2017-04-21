@@ -21,8 +21,68 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="SERDES_WSC.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SERDES_test_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="SERDES_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="SERDES_test_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SERDES_test_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1492783562" xil_pn:in_ck="6527435704166437008" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1492783562">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../SerDes/deserializer.vhd"/>
+      <outfile xil_pn:name="../SerDes/serializer.vhd"/>
+      <outfile xil_pn:name="SERDES_test.v"/>
+      <outfile xil_pn:name="serdes.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1492780987" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3324941540550164636" xil_pn:start_ts="1492780987">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1492780987" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7491752884533266466" xil_pn:start_ts="1492780987">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1492780987" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6640763079389854136" xil_pn:start_ts="1492780987">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1492783564" xil_pn:in_ck="6527435704166437008" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1492783564">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../SerDes/deserializer.vhd"/>
+      <outfile xil_pn:name="../SerDes/serializer.vhd"/>
+      <outfile xil_pn:name="SERDES_test.v"/>
+      <outfile xil_pn:name="serdes.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1492783568" xil_pn:in_ck="6527435704166437008" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1301379624392590457" xil_pn:start_ts="1492783564">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="SERDES_test_beh.prj"/>
+      <outfile xil_pn:name="SERDES_test_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1492783569" xil_pn:in_ck="-4705166710199290572" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4854050167844199749" xil_pn:start_ts="1492783568">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="SERDES_test_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+  </transforms>
 
 </generated_project>

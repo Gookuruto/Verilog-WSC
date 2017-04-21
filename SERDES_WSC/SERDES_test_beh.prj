@@ -1,0 +1,5 @@
+vhdl work "../SerDes/serializer.vhd"
+vhdl work "../SerDes/deserializer.vhd"
+verilog work "serdes.v"
+verilog work "SERDES_test.v"
+verilog work "H:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

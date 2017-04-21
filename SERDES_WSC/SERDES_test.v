@@ -45,10 +45,10 @@ module SERDES_test;
 	integer k=0;
 	initial begin
 		// Initialize Inputs
-		file =$fopen("input.txt", "wr");
-		file2=$fopen("result.txt","a+");
+		file =$fopen("input.txt", "w");
+		file2=$fopen("result.txt","w");
 		file3 =$fopen("comprasion.txt","wr");
-		for(i=0;i<100;i=i+1)
+		for(i=0;i<10;i=i+1)
 			begin
 				tofile =$random%255;
 				$fwrite(file,"%x ",tofile);
@@ -62,6 +62,7 @@ module SERDES_test;
 		// Wait 100 ns for global reset to finish
 		#10;
 		reset =1;
+		para_in=10000001;
 		
        
     //use captured_data as you would any other wire or reg value;
@@ -73,15 +74,14 @@ module SERDES_test;
 		clk<=~clk;
 		#1;
 	end
-		 always @(posedge clk) begin
+		 always @(posedge clk && reset ==1) begin
 		$fscanf(file, "%x ", tofile); 
-		if (!$feof(file)) begin
 			para_in =10000001;
 			#100;
 			para_in = tofile;
 			#100;
 			//$fwrite(file2,"%x ",para_out);
-			end
+			//$fwrite(file2,"%x ",para_out);
 			$fwrite(file2,"%x ",para_out);
 			if($feof(file))
 			begin
